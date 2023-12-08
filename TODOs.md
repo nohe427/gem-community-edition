@@ -1,0 +1,4 @@
+- ~~Add JSON for response.~~
+- Stream responses
+- Add chat capabilities.
+- Add a cache for converstaion?
