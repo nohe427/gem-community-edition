@@ -9,9 +9,9 @@ part of 'generative_content_response.dart';
 GenerateContentReponse _$GenerateContentReponseFromJson(
         Map<String, dynamic> json) =>
     GenerateContentReponse(
-      (json['candidates'] as List<dynamic>)
+      (json['candidates'] == null ? null : (json['candidates'] as List<dynamic>)
           .map((e) => Candidate.fromJson(e as Map<String, dynamic>))
-          .toList(),
+          .toList()),
       json['promptFeedback'] == null
           ? null
           : PromptFeedback.fromJson(

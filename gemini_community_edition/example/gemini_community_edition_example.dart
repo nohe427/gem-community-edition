@@ -5,27 +5,28 @@ import 'package:gemini_community_edition/src/common/part.dart';
 import 'package:gemini_community_edition/src/generative_model.dart';
 import 'dart:io';
 
-final API_KEY = "";
+final API_KEY = File("example/API_KEY").readAsStringSync();
 
-void main() {
+void main() async {
+  print("First, we'll generate a story with a non-streaming generative model...");
+  await basicGenerativeModel();
+  print("Next, we'll use the same prompt with a streaming model...");
   basicStreamModel();
 }
 
-void basicGenerativeModel() {
+Future basicGenerativeModel() async {
   final model = GenerativeModel(ModelName.geminiPro, API_KEY);
-  model
+  final value = await model
       .generateContent(Content("user",
-          [TextPart("Tell me a story that is at least 1000 words long")]))
-      .then((value) {
-    value.candidates.forEach((Candidate candidate) {
-      print(candidate.content.parts.length);
-      candidate.content.parts.forEach((Part part) {
-        if (part is TextPart) {
-          print(part.text);
-        }
-      });
-    });
-  });
+          [TextPart("Tell me a story that is at least 1000 words long")]));
+  for (var candidate in value.candidates!) {
+    print(candidate.content.parts.length);
+    for (var part in candidate.content.parts) {
+      if (part is TextPart) {
+        print(part.text);
+      }
+    }
+  }
 }
 
 void basicStreamModel() {
@@ -34,12 +35,12 @@ void basicStreamModel() {
       .generateContentStream(Content("user",
           [TextPart("Tell me a story that is at least 1000 words long")]))
       .listen((value) {
-    value.candidates.forEach((Candidate candidate) {
-      candidate.content.parts.forEach((Part part) {
+    for (var candidate in value.candidates!) {
+      for (var part in candidate.content.parts) {
         if (part is TextPart) {
           stdout.write(part.text);
         }
-      });
-    });
+      }
+    }
   });
 }

@@ -7,7 +7,7 @@ part 'generative_content_response.g.dart';
 
 @JsonSerializable()
 class GenerateContentReponse {
-  final List<Candidate> candidates;
+  final List<Candidate>? candidates;
   final PromptFeedback? promptFeedback;
 
   GenerateContentReponse(this.candidates, [this.promptFeedback]);
