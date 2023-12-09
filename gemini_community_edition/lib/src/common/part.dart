@@ -44,7 +44,7 @@ class Base64ImagePart extends Part {
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
-      "inlinedData": {"mime_type": mimeType, "data": base64String}
+      "inline_data": {"mime_type": mimeType, "data": base64String}
     };
   }
 
