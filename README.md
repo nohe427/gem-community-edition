@@ -10,4 +10,5 @@ Steps to generate the SDK:
 To run the code sample:
 
 0. Generate the SDK as shown above
-1. `dart run example/gemini_community_edition_example.dart`
+1. Insert a valid Gemini API key into `example/gemini_community_edition_example.dart`
+2. Run `dart run example/gemini_community_edition_example.dart`
