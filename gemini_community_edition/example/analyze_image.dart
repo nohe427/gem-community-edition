@@ -10,6 +10,7 @@ import 'dart:io';
 final apiKey = File("example/API_KEY").readAsStringSync();
 
 void main(List<String> arguments) async {
+  // Example invocation: dart run example/analyze_image.dart "What is in this picture?" example/xmas_tree.jpeg "Is it real?" "Is it good?"
   proVisionModel(arguments.isNotEmpty ? arguments : ["What is in this picture?", "example/duck.png"]);
 }
 
