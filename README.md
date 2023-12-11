@@ -1,3 +1,5 @@
+**This is not an officially supported Google product**
+
 This requires code generation from : dart run build_runner build
 
 Steps to generate the SDK:
