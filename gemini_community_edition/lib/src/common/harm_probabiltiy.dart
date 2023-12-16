@@ -16,23 +16,23 @@ import 'package:json_annotation/json_annotation.dart';
 
 @JsonEnum(valueField: "value")
 enum HarmProbability {
-  /** A new and not yet supported value. */
-  UNKNOWN("UNKNOWN"),
+  /// A new and not yet supported value.
+  unknown("UNKNOWN"),
 
-  /** Probability for harm is unspecified. */
-  UNSPECIFIED("HARM_PROBABILITY_UNSPECIFIED"),
+  /// Probability for harm is unspecified.
+  unspecified("HARM_PROBABILITY_UNSPECIFIED"),
 
-  /** Probability for harm is negligible. */
-  NEGLIGIBLE("NEGLIGIBLE"),
+  /// Probability for harm is negligible.
+  negligible("NEGLIGIBLE"),
 
-  /** Probability for harm is low. */
-  LOW("LOW"),
+  /// Probability for harm is low.
+  low("LOW"),
 
-  /** Probability for harm is medium. */
-  MEDIUM("MEDIUM"),
+  /// Probability for harm is medium.
+  medium("MEDIUM"),
 
-  /** Probability for harm is high. */
-  HIGH("HIGH");
+  /// Probability for harm is high.
+  high("HIGH");
 
   final String value;
   const HarmProbability(this.value);

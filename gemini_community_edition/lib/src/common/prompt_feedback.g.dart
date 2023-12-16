@@ -35,8 +35,8 @@ Map<String, dynamic> _$PromptFeedbackToJson(PromptFeedback instance) =>
     };
 
 const _$BlockedReasonEnumMap = {
-  BlockedReason.UNKNOWN: 'UNKNOWN',
-  BlockedReason.UNSPECIFIED: 'BLOCKED_REASON_UNSPECIFIED',
-  BlockedReason.SAFETY: 'SAFETY',
-  BlockedReason.OTHER: 'OTHER',
+  BlockedReason.unknown: 'UNKNOWN',
+  BlockedReason.unspecified: 'BLOCKED_REASON_UNSPECIFIED',
+  BlockedReason.safety: 'SAFETY',
+  BlockedReason.other: 'OTHER',
 };

@@ -33,11 +33,11 @@ Map<String, dynamic> _$SafetySettingToJson(SafetySetting instance) =>
     };
 
 const _$HarmCategoryEnumMap = {
-  HarmCategory.UNKNOWN: 'UNKNOWN',
-  HarmCategory.HARASSMENT: 'HARM_CATEGORY_HARASSMENT',
-  HarmCategory.HATE_SPEECH: 'HARM_CATEGORY_HATE_SPEECH',
-  HarmCategory.SEXUALLY_EXPLICIT: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-  HarmCategory.DANGEROUS_CONTENT: 'HARM_CATEGORY_DANGEROUS_CONTENT',
+  HarmCategory.unknown: 'UNKNOWN',
+  HarmCategory.harassment: 'HARM_CATEGORY_HARASSMENT',
+  HarmCategory.hateSpeech: 'HARM_CATEGORY_HATE_SPEECH',
+  HarmCategory.sexuallyExplicit: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
+  HarmCategory.dangerousContent: 'HARM_CATEGORY_DANGEROUS_CONTENT',
 };
 
 const _$BlockThresholdEnumMap = {

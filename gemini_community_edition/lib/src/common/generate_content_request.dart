@@ -14,7 +14,6 @@
 
 import 'package:gemini_community_edition/src/common/generation_config.dart';
 import 'package:gemini_community_edition/src/common/safety_setting.dart';
-import 'package:http/http.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'content.dart';
@@ -28,7 +27,7 @@ class Request {
     if (this is GenerateContentRequest) {
       return _$GenerateContentRequestToJson(this as GenerateContentRequest);
     }
-    return Map<String, dynamic>();
+    return <String, dynamic>{};
   }
 
   factory Request.fromJson(Map<String, dynamic> json) {
@@ -49,5 +48,6 @@ class GenerateContentRequest implements Request {
   GenerateContentRequest(this.model, this.contents,
       [this.safetySettings, this.generationConfig]);
 
+  @override
   Map<String, dynamic> toJson() => _$GenerateContentRequestToJson(this);
 }

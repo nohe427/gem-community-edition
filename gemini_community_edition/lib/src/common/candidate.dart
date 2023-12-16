@@ -69,26 +69,26 @@ class CitationMetadata {
 
 @JsonEnum(valueField: "value")
 enum FinishReason {
-  /** A new and not yet supported value. */
-  UNKNOWN("UNKNOWN"),
+  /// A new and not yet supported value.
+  unknown("UNKNOWN"),
 
-  /** Reason is unspecified. */
-  UNSPECIFIED("FINISH_REASON_UNSPECIFIED"),
+  /// Reason is unspecified.
+  unspecified("FINISH_REASON_UNSPECIFIED"),
 
-  /** Model finished successfully and stopped. */
-  STOP("STOP"),
+  /// Model finished successfully and stopped.
+  stop("STOP"),
 
-  /** Model hit the token limit. */
-  MAX_TOKENS("MAX_TOKENS"),
+  /// Model hit the token limit.
+  maxTokens("MAX_TOKENS"),
 
-  /** [SafetySetting]s prevented the model from outputting content. */
-  SAFETY("SAFETY"),
+  /// [SafetySetting]s prevented the model from outputting content.
+  safety("SAFETY"),
 
-  /** Model began looping. */
-  RECITATION("RECITATION"),
+  /// Model began looping.
+  recitation("RECITATION"),
 
-  /** Model stopped for another reason. */
-  OTHER("OTHER");
+  /// Model stopped for another reason.
+  other("OTHER");
 
   final String value;
   const FinishReason(this.value);
