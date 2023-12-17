@@ -25,7 +25,9 @@ final apiKey = File("example/API_KEY").readAsStringSync();
 
 void main(List<String> arguments) async {
   // Example invocation: dart run example/analyze_image.dart "What is in this picture?" example/xmas_tree.jpeg "Is it real?" "Is it good?"
-  proVisionModel(arguments.isNotEmpty ? arguments : ["What is in this picture?", "example/duck.png"]);
+  proVisionModel(arguments.isNotEmpty
+      ? arguments
+      : ["What is in this picture?", "example/duck.png"]);
 }
 
 Future proVisionModel(List<String> args) async {
@@ -54,8 +56,7 @@ void printResponse(GenerateContentReponse response) {
         }
       }
     }
-  }
-  else {
+  } else {
     print("Got no candidate answers");
   }
 }
@@ -69,13 +70,12 @@ List<Part> parseArgumentsIntoParts(List<String> args) {
       final mimeType = switch (arg.substring(arg.lastIndexOf("."))) {
         ".png" => "image/png",
         ".jpg" => "image/jpeg",
-        ".jpeg" => "image/jpeg",        
+        ".jpeg" => "image/jpeg",
         String() => throw "Unhandled file type: $arg",
       };
       print('Loaded $arg as a $mimeType part');
       return Base64ImagePart(mimeType, base64String);
-    }
-    else {
+    } else {
       return TextPart(arg);
     }
   });

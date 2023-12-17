@@ -22,9 +22,9 @@ final apiKey = File("example/API_KEY").readAsStringSync();
 
 void main() async {
   print(
-      "First, we'll generate a story with a non-streaming generative model...");
+      "First, we'll generate a story with a non-streaming generative model...\n");
   await basicGenerativeModel();
-  print("Next, we'll use the same prompt with a streaming model...");
+  print("Next, we'll use the same prompt with a streaming model...\n");
   await basicStreamModel();
 }
 
@@ -40,6 +40,7 @@ Future basicGenerativeModel() async {
       }
     }
   }
+  print("");
 }
 
 Future<void> basicStreamModel() async {
@@ -56,4 +57,6 @@ Future<void> basicStreamModel() async {
       }
     }
   }
+  stdout.flush();
+  print("");
 }
