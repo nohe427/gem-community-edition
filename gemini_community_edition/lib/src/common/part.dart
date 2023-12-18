@@ -18,7 +18,7 @@ part 'part.g.dart';
 
 @JsonSerializable(createFactory: false)
 class Part {
-  Part() {}
+  Part();
 
   Map<String, dynamic> toJson() {
     if (this is TextPart) {
@@ -27,7 +27,7 @@ class Part {
     if (this is Base64ImagePart) {
       return (this as Base64ImagePart).toJson();
     }
-    return Map<String, dynamic>();
+    return <String, dynamic>{};
   }
 
   factory Part.fromJson(Map<String, dynamic> json) {
@@ -56,6 +56,7 @@ class Base64ImagePart extends Part {
   @JsonKey(name: "data")
   final String base64String;
 
+  @override
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       "inline_data": {"mime_type": mimeType, "data": base64String}

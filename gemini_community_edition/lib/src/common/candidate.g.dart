@@ -39,13 +39,13 @@ Map<String, dynamic> _$CandidateToJson(Candidate instance) => <String, dynamic>{
     };
 
 const _$FinishReasonEnumMap = {
-  FinishReason.UNKNOWN: 'UNKNOWN',
-  FinishReason.UNSPECIFIED: 'FINISH_REASON_UNSPECIFIED',
-  FinishReason.STOP: 'STOP',
-  FinishReason.MAX_TOKENS: 'MAX_TOKENS',
-  FinishReason.SAFETY: 'SAFETY',
-  FinishReason.RECITATION: 'RECITATION',
-  FinishReason.OTHER: 'OTHER',
+  FinishReason.unknown: 'UNKNOWN',
+  FinishReason.unspecified: 'FINISH_REASON_UNSPECIFIED',
+  FinishReason.stop: 'STOP',
+  FinishReason.maxTokens: 'MAX_TOKENS',
+  FinishReason.safety: 'SAFETY',
+  FinishReason.recitation: 'RECITATION',
+  FinishReason.other: 'OTHER',
 };
 
 SafetyRating _$SafetyRatingFromJson(Map<String, dynamic> json) => SafetyRating(
@@ -62,20 +62,20 @@ Map<String, dynamic> _$SafetyRatingToJson(SafetyRating instance) =>
     };
 
 const _$HarmCategoryEnumMap = {
-  HarmCategory.UNKNOWN: 'UNKNOWN',
-  HarmCategory.HARASSMENT: 'HARM_CATEGORY_HARASSMENT',
-  HarmCategory.HATE_SPEECH: 'HARM_CATEGORY_HATE_SPEECH',
-  HarmCategory.SEXUALLY_EXPLICIT: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-  HarmCategory.DANGEROUS_CONTENT: 'HARM_CATEGORY_DANGEROUS_CONTENT',
+  HarmCategory.unknown: 'UNKNOWN',
+  HarmCategory.harassment: 'HARM_CATEGORY_HARASSMENT',
+  HarmCategory.hateSpeech: 'HARM_CATEGORY_HATE_SPEECH',
+  HarmCategory.sexuallyExplicit: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
+  HarmCategory.dangerousContent: 'HARM_CATEGORY_DANGEROUS_CONTENT',
 };
 
 const _$HarmProbabilityEnumMap = {
-  HarmProbability.UNKNOWN: 'UNKNOWN',
-  HarmProbability.UNSPECIFIED: 'HARM_PROBABILITY_UNSPECIFIED',
-  HarmProbability.NEGLIGIBLE: 'NEGLIGIBLE',
-  HarmProbability.LOW: 'LOW',
-  HarmProbability.MEDIUM: 'MEDIUM',
-  HarmProbability.HIGH: 'HIGH',
+  HarmProbability.unknown: 'UNKNOWN',
+  HarmProbability.unspecified: 'HARM_PROBABILITY_UNSPECIFIED',
+  HarmProbability.negligible: 'NEGLIGIBLE',
+  HarmProbability.low: 'LOW',
+  HarmProbability.medium: 'MEDIUM',
+  HarmProbability.high: 'HIGH',
 };
 
 CitationMetadata _$CitationMetadataFromJson(Map<String, dynamic> json) =>

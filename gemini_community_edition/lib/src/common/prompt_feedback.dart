@@ -34,4 +34,3 @@ class PromptFeedback {
 //   val blockReason: BlockedReason,
 //   val safetyRatings: List<SafetyRating>,
 // ) {}
-
